@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+--clr
+{
+    background-color: #111111;
+}
+--bs-body-bg
+{
+    background-color: #111111;
+}
+:root
+{
+    background-color: #111111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    background-color: #111111;
+}
+
+.container{
+    margin-left: 1%;
+    margin-right: 5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+    background-color:#000000 ;
+}
+
+/* Navbar section */
+
+.nav{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: rgb(23, 23, 24);
+}
+
+.nav div.logo{
+    width: 180px;
+    height: 10px;
+    position: absolute;
+}
+
+.nav div.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.nav div.logo a:hover {
+    color: #c0c0c0;
+}
+
+.nav div.main_list{
+    width: 600px;
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul{
+    width:100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.main_list ul li{
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.main_list ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.nav div.main_list ul li a:hover{
+    color: #f3efef;
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #111111;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #000000;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #c0c0c0;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -20deg);
+}
+
+/* Home section */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+}
+
+/* Medai qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .container{
+        margin: 0;
+    }
+    
+}
+/*inicio body*/
+body {
+    display:flexbox;
+    justify-content: center;
+    align-items:baseline;
+    min-height: 100vh;
+    background-color: transparent;
+}
+/*fin body*/
+
+@media screen and (max-width:768px) {
+    
+    .container{
+        margin: 0;
+    }
+    
+    .nav div.logo{
+        margin-left: 15px;
+    }
+    
+    .nav div.main_list{
+        width: 100%;
+        margin-top: 65px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .nav div.show_list{
+        height: 200px;
+    }
+    
+    .nav div.main_list ul{
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        top: 80px;
+        right: 0;
+        left: 0;
+    }
+    
+    .nav div.main_list ul li{
+        width: 100%;
+        height: 40px;
+        background-color:rgba(255, 255, 255, 0.8);
+    }
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
+}
+.footer
+{
+    background-color: #1b1a1a;
+    color: white !important;
+}
+
+.pie
+{
+    background-color: #1b1a1a;
+    color: #fff;
+}
+.accordion accordion-flush
+{
+    background-color: #1b1a1a;
+    color: #ffffff;
+}
+.accordion-button{
+    background-color: #1b1a1a!important;
+    color: #ffffff !important;
+    
+}
+#accordionFlushExample
+{
+    background-color: #1b1a1a;
+    font-style: italic;
+    color:#fff;
+}
+/*inicio vicente zapata*/
+.accordion-body
+{
+    background-color: #1b1a1a;
+    color:#ffffff;
+}
+/*fin vicente zapata*/
+
+.accordion-item
+{
+    background-color: #1b1a1a;
+    color:#fdfcfc;
+}
+.accordionFlushExample
+{
+    background-color: #1b1a1a;
+}
+.button
+{
+    background-color: #1b1a1a;
+}
+#flush-headingOne
+{
+    background-color: #1b1a1a;
+}
+/*creado por felipe cerpa*/
+.accordion-button collapsed
+{
+    background-color: #1b1a1a;
+    color: #ffffff;
+}
+
+/*inicio css cartas*/
+
+.container .card {
+    background-color: #111111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    /*background: white(12, 12, 12);*/
+    background: #000000;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgb(0, 0, 0);
+}
+
+.container .card:hover {
+    height: 400px;
+    cursor: pointer;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #ffffff;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+   
+   /*background: var(--clr);*/
+    color: rgb(243, 239, 239);
+    font-weight: 500;
+    background-color: #000000;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+        background-color: #111111;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+/*fin css cartas*/
+
+/*inicio css formulario*/
+.container.form {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container.form.form-box {
+width: 300px;
+height: 400px;
+background-color: #111111;
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container.form.form-box.form-title {
+width: 100%;
+height: 50px;
+background-color: #111111;
+border-radius: 15px 15px 0px 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 1.5rem;
+}
+.container.form.form-box.form-title h1 {
+font-size: 1.5rem;
+font-weight: 600;
+}
+.container.form.form-box.form-content {
+width: 100%;
+height: 300px;
+background-color: #111111;
+border-radius: 0px 0px 15px 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.container.form.form-box.form-content.form-input {
+width: 100%;
+height: 40px;
+background-color: #111111;
+border-radius: 15px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.container.form.form-box.form-content.form-input input {
+width: 100%;
+height: 100%;
+border: none;
+outline: none;
+background-color: transparent;
+color: #fff;
+font-size: 1.2rem;
+}
+.container.form.form-box.form-content.form-input button {
+width: 100%;
+height: 100%;
+border: none;
+outline: none;
+background-color: #fff;
+color: #111111;
+font-size: 1.2rem;
+}
+.container.form.form-box.form-content.form-input button:hover {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:focus {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:active {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled:hover {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled:focus {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled:active {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled:disabled {
+background-color: #111111;
+color: #fff;
+}
+.container.form.form-box.form-content.form-input button:disabled:disabled:hover {
+    background-color: #111111;
+    color: #fff;
+    }
+    .container.form.form-box.form-content.form-input button:disabled:disabled:focus {
+        background-color: #111111;
+        color: #fff;
+        }
+        .container.form.form-box.form-content.form-input button:disabled:disabled:active {
+            background-color: #111111;
+            color: #fff;
+            }
+            .container.form.form-box.form-content.form-input button:disabled:disabled:disabled {
+                background-color: #111111;
+                color: #fff;
+                }
+
+/*fin css formulario*/
